@@ -1,5 +1,6 @@
 .card {
-    max-width: 350px;
+    position: relative;
+    max-width: 400px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -15,7 +16,7 @@
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     display: block;
 }
@@ -25,12 +26,34 @@
 }
 
 .price {
+
     font-size: 24px;
     font-weight: bold;
     color: #2d5016;
-    margin-bottom: 8px;
+    position: absolute;
+    right: 10px;
+    top: 10px
 }
 
+.tour-type {
+
+    font-size: 12px;
+    font-weight: bold;
+    color: #2d5016;
+    position: absolute;
+    left: 10px;
+    top: 10px
+}
+
+.difficulty {
+
+    font-size: 10px;
+    font-weight: bold;
+    color: #2d5016;
+    position: absolute;
+    left: 10px;
+    bottom: 230px
+}
 .title {
     font-size: 18px;
     font-weight: bold;
@@ -79,10 +102,17 @@
     font-size: 13px;
 }
 
-/* Optional: Add some spacing for multiple cards */
-body {
-    background-color: #f8f9fa;
-    padding: 40px;
-    margin: 0;
-    font-family: Arial, sans-serif;
+
+.price, .tour-type, .difficulty {
+    display: inline-block;
+    padding: 8px 10px; /* This creates the oval shape */
+    border-radius: 25px; /* Adjust for more/less oval */
+    background-color: rgb(253, 252, 252);
+    color: black;
+    font-weight: bold;
+}
+
+/* Orange for tour-type */
+.tour-type {
+    background-color: #ff4800;
 }
